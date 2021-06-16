@@ -171,7 +171,8 @@ export default function HomeScreen({ navigation, route }: Params): JSX.Element {
   useEffect(() => {
     const loadLiveStreams = async () => {
       try {
-        const liveStreamsResult = await LiveEventService.startLiveEventService();
+        const liveStreamsResult =
+          await LiveEventService.startLiveEventService();
         if (liveStreamsResult?.liveEvents)
           setLiveEvents(liveStreamsResult?.liveEvents);
       } catch (error) {

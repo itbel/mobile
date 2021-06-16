@@ -33,6 +33,7 @@ import HomeChurchScreen, {
 } from '../screens/homechurch/HomeChurchScreen';
 import HomeChurchMapScreen from '../screens/homechurch/HomeChurchMapScreen';
 import HomeChurchLocationSelect from '../screens/homechurch/HomeChurchLocationSelect';
+import ReelsScreen from '../screens/teaching/ReelsScreen';
 
 export type MainStackParamList = {
   Main:
@@ -63,6 +64,7 @@ export type MainStackParamList = {
     nextToken: string | undefined;
     fromSeries?: boolean;
   };
+  ReelsScreen: any;
   HomeChurchLocationSelect: { loc?: LocationData };
   DateRangeSelectScreen: undefined;
   SermonLandingScreen: {
@@ -111,6 +113,7 @@ export default function NavigationRoot(): JSX.Element {
       <Main.Screen name="ProfileScreen" component={ProfileScreen} />
       <Main.Screen name="AccountScreen" component={AccountScreen} />
       <Main.Screen name="AllEvents" component={AllEvents} />
+      <Main.Screen name="ReelsScreen" component={ReelsScreen} />
       <Main.Screen
         name="ChangePasswordScreen"
         component={ChangePasswordScreen}

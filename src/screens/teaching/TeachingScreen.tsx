@@ -16,6 +16,7 @@ import { FlatList } from 'react-native-gesture-handler';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { CompositeNavigationProp } from '@react-navigation/native';
 import API, { GRAPHQL_AUTH_MODE, GraphQLResult } from '@aws-amplify/api';
+import WhiteButton from '../../components/buttons/WhiteButton';
 import { Theme, Style, HeaderStyle } from '../../Theme.style';
 import AllButton from '../../components/buttons/AllButton';
 import TeachingListItem from '../../components/teaching/TeachingListItem';
@@ -475,7 +476,12 @@ export default function TeachingScreen({ navigation }: Params): JSX.Element {
             All sermons
           </AllButton>
         </View>
-
+        <WhiteButton
+          outlined
+          label="Reels"
+          style={{ height: 56 }}
+          onPress={() => navigation.navigate('ReelsScreen')}
+        />
         <View style={style.categorySection}>
           <Text style={style.categoryTitle}>Highlights</Text>
           <Text style={style.highlightsText}>Short snippets of teaching</Text>
